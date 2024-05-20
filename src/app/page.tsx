@@ -1,29 +1,29 @@
-import Head from "next/head";
+import { Benefits } from "@/components/Benefits";
+import { Contact } from "@/components/Contact";
+import { FAQ } from "@/components/FAQ";
+import { Steps } from "@/components/Steps";
 
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Bruna Gouveia Fisioterapeuta",
+  description: "Transforme Sua Vida com Fisioterapia Domiciliar",
+  // metadataBase: new URL("https://next-learn-dashboard.vercel.sh"),
+};
 export default function Home() {
   return (
     <div className="bg-white text-gray-600 min-h-screen">
-      <Head>
-        <title>Bruna Gouveia Fisioterapia Domiciliar</title>
-        <meta
-          name="description"
-          content="Transforme Sua Vida com Fisioterapia Domiciliar"
-        />
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
-
       <div className="max-w-[85rem] mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid md:grid-cols-[1.1fr_1fr] gap-4 md:gap-8 xl:gap-20 md:items-center">
           <div>
-            <h1 className="block text-3xl font-bold text-gray-800 sm:text-4xl lg:text-6xl lg:leading-tight ">
+            <h1 className="block text-3xl font-bold text-gray-800 sm:text-4xl lg:text-6xl lg:leading-tight">
               Transforme Sua Vida com{" "}
               <span className="text-primary">Fisioterapia Domiciliar</span>
             </h1>
-            <p className="mt-3 text-lg text-gray-800 ">
+            <p className="mt-3 text-lg text-gray-800">
               Cuidado personalizado no conforto do seu lar para você que
               valoriza saúde e bem-estar.
             </p>
-
             <div className="mt-7 grid gap-3 w-full sm:inline-flex">
               <a
                 className="py-3 px-4 inline-flex justify-center items-center gap-x-2 text-sm font-semibold rounded-lg border border-transparent bg-primary text-white hover:bg-primary-hover disabled:opacity-50 disabled:pointer-events-none"
@@ -46,10 +46,8 @@ export default function Home() {
                 </svg>
               </a>
             </div>
-            {/* Google */}
           </div>
-
-          <div className="relative ms-4">
+          <div className="relative ms-4 p-12">
             <img
               className="w-full rounded-md"
               src="https://images.pexels.com/photos/4506073/pexels-photo-4506073.jpeg?auto=compress&cs=tinysrgb&w=600&auto=format&fit=crop&w=700&h=800&q=80"
@@ -59,238 +57,94 @@ export default function Home() {
         </div>
       </div>
 
-      {/* Hero Section */}
-      <div className="text-center py-20 bg-primary text-white">
-        <h1 className="text-4xl font-bold">
-          Transforme Sua Vida com Fisioterapia Domiciliar
-        </h1>
-        <p className="mt-4">
-          Cuidado personalizado no conforto do seu lar para você que valoriza
-          saúde e bem-estar.
-        </p>
-        <button className="mt-8 bg-white text-primary font-bold py-2 px-4 rounded">
-          Agende Sua Consulta
-        </button>
-      </div>
-
       {/* Sobre Bruna Gouveia */}
-      <div className="container mx-auto px-4 py-10">
-        <h2 className="text-3xl font-bold text-center">Sobre Bruna Gouveia</h2>
-        <p className="text-center mt-4">
-          Bruna Gouveia é uma fisioterapeuta dedicada, com mais de 10 anos de
-          experiência...
-        </p>
+      <div className="bg-primary  p-16">
+        <div className="bg-white border-[1px] border-primary-hover  mx-auto p-6 max-w-5xl rounded-2xl">
+          <div className="flex flex-col md:flex-row gap-6">
+            <div className="flex flex-col">
+              <h1 className="text-3xl font-bold  text-primary">
+                Sobre Bruna Gouveia
+              </h1>
+              <p className="mt-4 text-lg ">
+                Olá, sou Bruna Lorena Gouveia Lopes, fisioterapeuta,
+                especializada em Pilates, massagem terapêutica e treinamento
+                funcional. Ofereço serviços de fisioterapia domiciliar, focando
+                na melhoria da qualidade de vida e funcionalidade através do
+                movimento consciente. Trabalho individualmente com cada
+                paciente, criando planos de tratamento adaptados às suas
+                necessidades e objetivos específicos.
+              </p>
+              <p className="mt-4 text-lg ">
+                Meus serviços visam reduzir a dor, aumentar a independência e
+                funcionalidade, e melhorar o condicionamento físico. Promovo a
+                educação, incentivando hábitos saudáveis para uma vida ativa e
+                duradoura.
+              </p>
+              <p className="mt-4 text-lg ">
+                Estou aqui para oferecer o melhor da fisioterapia no conforto do
+                seu lar, guiando você rumo à saúde e ao bem-estar com um serviço
+                altamente personalizado e atencioso.
+              </p>
+            </div>
+            <div className="flex flex-col md:flex-row gap-6">
+              <div className="flex flex-col items-center">
+                <div
+                  className="w-64 h-full  bg-cyan-500 bg-cover bg-center rounded-2xl"
+                  style={{ backgroundImage: "url('URL_DA_IMAGEM_2')" }}
+                ></div>
+              </div>
+            </div>
+          </div>
+          <div className="flex flex-col md:flex-row gap-8 mt-8">
+            <div className="flex flex-row items-start gap-4">
+              <div className="w-12 h-12 bg-cover bg-center"></div>
+              <div className="flex flex-col">
+                <div className="text-xl font-bold  text-primary">Pilates</div>
+                <div className="text-lg ">
+                  Melhore a flexibilidade, força e equilíbrio com movimentos
+                  controlados, reduzindo dores e prevenindo lesões.
+                </div>
+              </div>
+            </div>
+            <div className="flex flex-row items-start gap-4">
+              <div className="w-12 h-12 bg-cover bg-center"></div>
+              <div className="flex flex-col">
+                <div className="text-xl font-bold  text-primary">
+                  Massagem Terapêutica
+                </div>
+                <div className="text-lg ">
+                  Alivie tensões musculares, melhore a circulação e promova o
+                  relaxamento, reduzindo estresse e ansiedade.
+                </div>
+              </div>
+            </div>
+            <div className="flex flex-row items-start gap-4">
+              <div className="w-12 h-12 bg-cover bg-center"></div>
+              <div className="flex flex-col">
+                <div className="text-xl font-bold  text-primary">
+                  Treinamento Funcional
+                </div>
+                <div className="text-lg ">
+                  Melhore a força, coordenação e resistência com movimentos que
+                  simulam atividades do dia a dia, mantendo-se ativo e
+                  prevenindo lesões.
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
 
       {/* Benefícios */}
-      <div className="bg-gray-100 py-10">
-        <div className="container mx-auto px-4">
-          <h2 className="text-3xl font-bold text-center">
-            Benefícios da Fisioterapia Domiciliar
-          </h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 mt-8">
-            <div className="text-center">
-              <div className="mb-2">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke="currentColor"
-                  className="w-6 h-6 mx-auto"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth="2"
-                    d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"
-                  ></path>
-                </svg>
-              </div>
-              <h3 className="font-semibold">Conforto do Lar</h3>
-              <p>
-                Receba cuidados sem sair de casa, ideal para quem busca
-                conveniência e conforto.
-              </p>
-            </div>
-            <div className="text-center">
-              <div className="mb-2">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  viewBox="0 0 20 20"
-                  fill="currentColor"
-                  className="w-6 h-6 mx-auto"
-                >
-                  <path d="M2 13V5a3 3 0 013-3h10a3 3 0 013 3v8a3 3 0 01-3 3h-4a1 1 0 110-2h4a1 1 0 001-1V5a1 1 0 00-1-1H5a1 1 0 00-1 1v8a1 1 0 001 1h1a1 1 0 110 2H5a3 3 0 01-3-3z" />
-                  <path d="M9 14H7a1 1 0 000 2h2a1 1 0 000-2z" />
-                </svg>
-              </div>
-              <h3 className="font-semibold">Atendimento Personalizado</h3>
-              <p>
-                Cada sessão é planejada para atender às suas necessidades
-                específicas, promovendo uma recuperação eficaz.
-              </p>
-            </div>
-            <div className="text-center">
-              <div className="mb-2">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke="currentColor"
-                  className="w-6 h-6 mx-auto"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth="2"
-                    d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"
-                  ></path>
-                </svg>
-              </div>
-              <h3 className="font-semibold">Economia de Tempo</h3>
-              <p>
-                Evite deslocamentos e otimize seu tempo, focando no que
-                realmente importa: sua saúde.
-              </p>
-            </div>
-            <div className="text-center">
-              <div className="mb-2">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  viewBox="0 0 20 20"
-                  fill="currentColor"
-                  className="w-6 h-6 mx-auto"
-                >
-                  <path
-                    fillRule="evenodd"
-                    d="M4 2a2 2 0 00-2 2v12a2 2 0 002 2h12a2 2 0 002-2V4a2 2 0 00-2-2H4zm2 4a1 1 0 011-1h6a1 1 0 110 2H7a1 1 0 01-1-1zm0 4a1 1 0 100 2h6a1 1 0 100-2H7zm-1 5a1 1 0 011-1h6a1 1 0 110 2H7a1 1 0 01-1-1z"
-                    clipRule="evenodd"
-                  />
-                </svg>
-              </div>
-              <h3 className="font-semibold">Privacidade e Conveniência</h3>
-              <p>
-                Desfrute de sessões no ambiente privado e confortável do seu
-                lar.
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
-
+      <Benefits />
       {/* Como Funciona */}
-      <div className="container mx-auto px-4 py-10">
-        <h2 className="text-3xl font-bold text-center">Como Funciona</h2>
-        <div className="mt-8 space-y-4">
-          <div>
-            <h3 className="font-semibold">1. Agendamento Fácil</h3>
-            <p>
-              Entre em contato através do formulário ou pelo telefone para
-              marcar sua consulta.
-            </p>
-          </div>
-          <div>
-            <h3 className="font-semibold">2. Avaliação Personalizada</h3>
-            <p>
-              Na primeira visita, realizaremos uma avaliação completa para
-              entender suas necessidades.
-            </p>
-          </div>
-          <div>
-            <h3 className="font-semibold">3. Plano de Tratamento Sob Medida</h3>
-            <p>
-              Desenvolveremos um plano de tratamento personalizado, focando em
-              sua rápida recuperação.
-            </p>
-          </div>
-          <div>
-            <h3 className="font-semibold">4. Sessões no Conforto do Seu Lar</h3>
-            <p>
-              Realize suas sessões de fisioterapia em casa, com todo o suporte
-              necessário.
-            </p>
-          </div>
-        </div>
-      </div>
+      <Steps />
 
       {/* FAQ */}
-      <div className="bg-gray-100 py-10">
-        <div className="container mx-auto px-4">
-          <h2 className="text-3xl font-bold text-center">FAQ</h2>
-          <div className="mt-8 space-y-4">
-            <div>
-              <h3 className="font-semibold">
-                Como posso agendar minha primeira consulta?
-              </h3>
-              <p>
-                Você pode agendar sua consulta preenchendo o formulário abaixo
-                ou entrando em contato pelo telefone fornecido.
-              </p>
-            </div>
-            <div>
-              <h3 className="font-semibold">
-                Quais são os métodos de pagamento aceitos?
-              </h3>
-              <p>
-                Aceitamos diversos métodos de pagamento, incluindo transferência
-                bancária, cartão de crédito e dinheiro.
-              </p>
-            </div>
-            <div>
-              <h3 className="font-semibold">
-                É necessário algum preparativo para a primeira sessão?
-              </h3>
-              <p>
-                Recomendamos um espaço tranquilo e confortável em sua casa onde
-                você possa se movimentar livremente. Bruna trará todo o
-                equipamento necessário.
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
+      <FAQ />
 
       {/* Formulário de Agendamento */}
-      <div className="container mx-auto px-4 py-10">
-        <h2 className="text-3xl font-bold text-center">Agende Sua Consulta</h2>
-        <div className="mt-8">
-          <form
-            action="#"
-            method="POST"
-            className="grid grid-cols-1 gap-4 max-w-md mx-auto"
-          >
-            <input
-              type="text"
-              name="name"
-              placeholder="Seu Nome"
-              className="border p-2"
-            />
-            <input
-              type="email"
-              name="email"
-              placeholder="Seu E-mail"
-              className="border p-2"
-            />
-            <input
-              type="tel"
-              name="phone"
-              placeholder="Seu Telefone"
-              className="border p-2"
-            />
-            <textarea
-              name="message"
-              placeholder="Mensagem (Opcional)"
-              className="border p-2"
-            ></textarea>
-            <button
-              type="submit"
-              className="bg-primary text-white font-bold py-2 px-4 rounded"
-            >
-              Enviar
-            </button>
-          </form>
-        </div>
-      </div>
+      <Contact />
 
       {/* Footer */}
       <footer className="bg-gray-800 text-white text-center p-4">
@@ -301,7 +155,7 @@ export default function Home() {
           strokeLinecap="round"
           strokeLinejoin="round"
           strokeWidth="2"
-          className="w-5 h-5"
+          className="w-5 h-5 mx-auto"
           viewBox="0 0 24 24"
         >
           <rect width="20" height="20" x="2" y="2" rx="5" ry="5"></rect>
