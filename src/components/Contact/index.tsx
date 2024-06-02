@@ -271,7 +271,7 @@ export const Contact = () => {
                   className="relative inline-block font-medium text-black before:absolute before:bottom-0.5 before:start-0 before:-z-[1] before:w-full before:h-1 before:bg-lime-400 hover:before:bg-black focus:outline-none focus:before:bg-black dark:text-white dark:hover:before:bg-white dark:focus:before:bg-white"
                   href={whatsappLink}
                 >
-                  +55 (83) 99148-6666
+                  +55 (83) 99400-1876
                 </a>
               </p>
             </div>
