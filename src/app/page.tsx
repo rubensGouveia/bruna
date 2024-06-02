@@ -2,6 +2,8 @@ import { Benefits } from "@/components/Benefits";
 import { Contact } from "@/components/Contact";
 import { FAQ } from "@/components/FAQ";
 import { Steps } from "@/components/Steps";
+import { faqItems } from "@/utils/Constants/faq";
+import { whatsappLink } from "@/utils/Constants/whatsapp";
 
 import { Metadata } from "next";
 
@@ -10,87 +12,79 @@ export const metadata: Metadata = {
   description: "Transforme Sua Vida com Fisioterapia Domiciliar",
   // metadataBase: new URL("https://next-learn-dashboard.vercel.sh"),
 };
+
 export default function Home() {
   return (
     <div className="bg-white text-gray-600 min-h-screen">
       <div className="max-w-[85rem] mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid md:grid-cols-[1.1fr_1fr] gap-4 md:gap-8 xl:gap-20 md:items-center">
+        <div className="grid md:grid-cols-[1.1fr_1fr] gap-4 md:gap-8 xl:gap-20 md:items-center py-8">
           <div>
-            <h1 className="block text-3xl font-bold text-gray-800 sm:text-4xl lg:text-6xl lg:leading-tight">
+            <h1 className="block text-2xl text-center sm:text-left  font-bold text-gray-800 sm:text-4xl lg:text-6xl lg:leading-tight">
               Transforme Sua Vida com{" "}
               <span className="text-primary">Fisioterapia Domiciliar</span>
             </h1>
-            <p className="mt-3 text-lg text-gray-800">
+            <p className="mt-3 text-lg text-center sm:text-left text-gray-800">
               Cuidado personalizado no conforto do seu lar para você que
               valoriza saúde e bem-estar.
             </p>
             <div className="mt-7 grid gap-3 w-full sm:inline-flex">
               <a
+                target="_blank"
                 className="py-3 px-4 inline-flex justify-center items-center gap-x-2 text-sm font-semibold rounded-lg border border-transparent bg-primary text-white hover:bg-primary-hover disabled:opacity-50 disabled:pointer-events-none"
-                href="#"
+                href={whatsappLink}
               >
-                Agende Sua Consulta
-                <svg
-                  className="flex-shrink-0 size-4"
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="24"
-                  height="24"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  strokeWidth="2"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                >
-                  <path d="m9 18 6-6-6-6" />
+                <svg viewBox="0 0 50 50" height="24">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    x="0px"
+                    y="0px"
+                    width="50"
+                    height="50"
+                    viewBox="0 0 50 50"
+                    fill="white"
+                  >
+                    <path d="M25,2C12.318,2,2,12.318,2,25c0,3.96,1.023,7.854,2.963,11.29L2.037,46.73c-0.096,0.343-0.003,0.711,0.245,0.966 C2.473,47.893,2.733,48,3,48c0.08,0,0.161-0.01,0.24-0.029l10.896-2.699C17.463,47.058,21.21,48,25,48c12.682,0,23-10.318,23-23 S37.682,2,25,2z M36.57,33.116c-0.492,1.362-2.852,2.605-3.986,2.772c-1.018,0.149-2.306,0.213-3.72-0.231 c-0.857-0.27-1.957-0.628-3.366-1.229c-5.923-2.526-9.791-8.415-10.087-8.804C15.116,25.235,13,22.463,13,19.594 s1.525-4.28,2.067-4.864c0.542-0.584,1.181-0.73,1.575-0.73s0.787,0.005,1.132,0.021c0.363,0.018,0.85-0.137,1.329,1.001 c0.492,1.168,1.673,4.037,1.819,4.33c0.148,0.292,0.246,0.633,0.05,1.022c-0.196,0.389-0.294,0.632-0.59,0.973 s-0.62,0.76-0.886,1.022c-0.296,0.291-0.603,0.606-0.259,1.19c0.344,0.584,1.529,2.493,3.285,4.039 c2.255,1.986,4.158,2.602,4.748,2.894c0.59,0.292,0.935,0.243,1.279-0.146c0.344-0.39,1.476-1.703,1.869-2.286 s0.787-0.487,1.329-0.292c0.542,0.194,3.445,1.604,4.035,1.896c0.59,0.292,0.984,0.438,1.132,0.681 C37.062,30.587,37.062,31.755,36.57,33.116z"></path>
+                  </svg>
                 </svg>
+                Agende Sua Consulta
               </a>
             </div>
           </div>
           <div className="relative ms-4 p-12">
             <img
               className="w-full rounded-md"
-              src="https://images.pexels.com/photos/4506073/pexels-photo-4506073.jpeg?auto=compress&cs=tinysrgb&w=600&auto=format&fit=crop&w=700&h=800&q=80"
-              alt="Image Description"
+              src="hero-bruna-2.jpg"
+              alt="bruna gouveia está em uma sessão de fisioterapia domiciliar com uma paciente mulher"
             />
           </div>
         </div>
       </div>
 
       {/* Sobre Bruna Gouveia */}
-      <div className="bg-primary  p-16">
+      <div className="bg-primary  p-6 sm:p-16">
         <div className="bg-white border-[1px] border-primary-hover  mx-auto p-6 max-w-5xl rounded-2xl">
           <div className="flex flex-col md:flex-row gap-6">
             <div className="flex flex-col">
-              <h1 className="text-3xl font-bold  text-primary">
+              <h1 className="text-2xl md:text-4xl font-bold  text-primary">
                 Sobre Bruna Gouveia
               </h1>
               <p className="mt-4 text-lg ">
-                Olá, sou Bruna Lorena Gouveia Lopes, fisioterapeuta,
-                especializada em Pilates, massagem terapêutica e treinamento
-                funcional. Ofereço serviços de fisioterapia domiciliar, focando
-                na melhoria da qualidade de vida e funcionalidade através do
-                movimento consciente. Trabalho individualmente com cada
-                paciente, criando planos de tratamento adaptados às suas
-                necessidades e objetivos específicos.
+                Olá! Sou Bruna Lorena Gouveia Lopes, fisioterapeuta com mais de
+                cinco anos de experiência. Tenho especialização em Pilates,
+                massagem terapêutica e treinamento funcional.
               </p>
               <p className="mt-4 text-lg ">
-                Meus serviços visam reduzir a dor, aumentar a independência e
-                funcionalidade, e melhorar o condicionamento físico. Promovo a
-                educação, incentivando hábitos saudáveis para uma vida ativa e
-                duradoura.
-              </p>
-              <p className="mt-4 text-lg ">
-                Estou aqui para oferecer o melhor da fisioterapia no conforto do
-                seu lar, guiando você rumo à saúde e ao bem-estar com um serviço
-                altamente personalizado e atencioso.
+                Meus atendimentos têm como objetivo reduzir a dor e promover
+                qualidade de vida, proporcionando independência e funcionalidade
+                através de movimentos conscientes, para que você possa desfrutar
+                do melhor da vida com saúde.
               </p>
             </div>
             <div className="flex flex-col md:flex-row gap-6">
               <div className="flex flex-col items-center">
                 <div
-                  className="w-64 h-full  bg-cyan-500 bg-cover bg-center rounded-2xl"
-                  style={{ backgroundImage: "url('URL_DA_IMAGEM_2')" }}
+                  className="w-64 h-64 bg-no-repeat  bg-contain bg-center rounded-2xl"
+                  style={{ backgroundImage: "url('bruna_foto.png')" }}
                 ></div>
               </div>
             </div>
@@ -141,7 +135,7 @@ export default function Home() {
       <Steps />
 
       {/* FAQ */}
-      <FAQ />
+      <FAQ items={faqItems} />
 
       {/* Formulário de Agendamento */}
       <Contact />
@@ -155,7 +149,7 @@ export default function Home() {
           strokeLinecap="round"
           strokeLinejoin="round"
           strokeWidth="2"
-          className="w-5 h-5 mx-auto"
+          className="w-5 h-5 mx-auto cursor-pointer"
           viewBox="0 0 24 24"
         >
           <rect width="20" height="20" x="2" y="2" rx="5" ry="5"></rect>
@@ -244,7 +238,7 @@ function GoogleComponent() {
 
         <div className="mt-5">
           <svg
-            className="h-auto w-16 text-gray-800 "
+            className="h-auto w-16 text-gray-800"
             width="80"
             height="27"
             viewBox="0 0 80 27"

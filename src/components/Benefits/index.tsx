@@ -3,7 +3,7 @@ import { BenefitItem } from "./BenefitItem";
 export const Benefits = () => {
   return (
     <div className="max-w-5xl px-4 py-10 sm:px-6 lg:px-8 lg:py-20 mx-auto">
-      <h2 className="text-3xl font-bold text-center mb-10 text-gray-800">
+      <h2 className="text-2xl md:text-4xl font-bold text-center mb-10 text-gray-800">
         Benefícios da Fisioterapia Domiciliar
       </h2>
       <div className="grid sm:grid-cols-2 lg:grid-cols-2 items-center gap-12">
