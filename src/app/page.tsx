@@ -10,7 +10,6 @@ import { Metadata } from "next";
 export const metadata: Metadata = {
   title: "Bruna Gouveia Fisioterapeuta",
   description: "Transforme Sua Vida com Fisioterapia Domiciliar",
-  // metadataBase: new URL("https://next-learn-dashboard.vercel.sh"),
 };
 
 export default function Home() {

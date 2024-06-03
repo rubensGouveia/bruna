@@ -2,6 +2,7 @@
 
 import { whatsappLink } from "@/utils/Constants/whatsapp";
 import { zodResolver } from "@hookform/resolvers/zod";
+import { useRouter } from "next/navigation";
 import { useEffect, useState } from "react";
 import { useForm } from "react-hook-form";
 import { z } from "zod";
@@ -10,7 +11,7 @@ import { z } from "zod";
 
 export const Contact = () => {
   const [loading, setLoading] = useState(false);
-  const [formSubmitted, setFormSubmitted] = useState(false);
+  const router = useRouter();
   const formSchema = z.object({
     name: z
       .string()
@@ -30,7 +31,7 @@ export const Contact = () => {
     handleSubmit,
     watch,
     setValue,
-    reset,
+
     formState: { errors },
   } = useForm<FormData>({
     resolver: zodResolver(formSchema),
@@ -61,11 +62,7 @@ export const Contact = () => {
     )
       .then((d) => {
         setLoading(false);
-        setFormSubmitted(true);
-        reset();
-        setTimeout(() => {
-          setFormSubmitted(false);
-        }, 5000);
+        router.push("/obrigado");
       })
       .catch((e) => {
         setLoading(false);
@@ -111,42 +108,6 @@ export const Contact = () => {
 
           <div>
             <div>
-              {formSubmitted && (
-                <div className="space-y-3 absolute z-10">
-                  <div
-                    className="max-w-xs bg-teal-500 text-sm text-white rounded-xl shadow-lg"
-                    role="alert"
-                  >
-                    <div className="flex p-4">
-                      Enviado com sucesso
-                      <div className="ms-auto">
-                        <button
-                          onClick={() => setFormSubmitted(false)}
-                          type="button"
-                          className="inline-flex flex-shrink-0 justify-center items-center size-5 rounded-lg text-white hover:text-white opacity-50 hover:opacity-100 focus:outline-none focus:opacity-100"
-                        >
-                          <span className="sr-only">Close</span>
-                          <svg
-                            className="flex-shrink-0 size-4"
-                            xmlns="http://www.w3.org/2000/svg"
-                            width="24"
-                            height="24"
-                            viewBox="0 0 24 24"
-                            fill="none"
-                            stroke="currentColor"
-                            stroke-width="2"
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
-                          >
-                            <path d="M18 6 6 18"></path>
-                            <path d="m6 6 12 12"></path>
-                          </svg>
-                        </button>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              )}
               <form
                 onSubmit={handleSubmit(onSubmit)}
                 className="grid grid-cols-1 gap-6 max-w-md "
@@ -214,7 +175,7 @@ export const Contact = () => {
           </div>
         </div>
         <div className="flex justify-center flex-col sm:flex-row gap-14 mt-10 ">
-          <div className="flex gap-4 ">
+          <div className="flex gap-4 justify-center sm:justify-start ">
             <svg
               className="flex-shrink-0 size-5 text-gray-500 dark:text-neutral-500"
               xmlns="http://www.w3.org/2000/svg"
