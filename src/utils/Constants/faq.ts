@@ -28,7 +28,7 @@ export const faqItems = [
     question:
       "Como posso ter certeza de que a fisioterapia domiciliar é adequada para mim?",
     answer:
-      "Durante a primeira consulta, faremos uma avaliação completa para entender suas necessidades e objetivos. Com base nessa avaliação, desenvolveremos um plano de tratamento personalizado para garantir que você receba o melhor cuidado possível.",
+      "Durante a primeira consulta, faremos uma avaliação para entender suas necessidades e objetivos. Com base nessa avaliação, desenvolveremos um plano de tratamento personalizado para garantir que você receba o melhor cuidado possível.",
   },
   {
     id: 6,
@@ -40,7 +40,7 @@ export const faqItems = [
     id: 7,
     question: "Os tratamentos são cobertos por planos de saúde?",
     answer:
-      "Atualmente, nossos serviços são particulares e não são cobertos por planos de saúde. No entanto, fornecemos recibos que podem ser utilizados para reembolso, dependendo da política do seu plano de saúde.",
+      "Atualmente, nossos serviços são particulares e não são cobertos por planos de saúde.",
   },
   {
     id: 8,
