@@ -62,7 +62,8 @@ export const Contact = () => {
     )
       .then((d) => {
         setLoading(false);
-        router.push("/obrigado");
+        router.replace("/obrigado");
+        router.refresh();
       })
       .catch((e) => {
         setLoading(false);
