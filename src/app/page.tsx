@@ -141,14 +141,14 @@ export default function Home() {
 
       {/* Footer */}
       <footer className="bg-gray-800 text-white text-center p-4">
-        Siga-nos nas Redes Sociais:
+        Bruna Gouveia - CREFITO 275747-F
         <svg
           fill="none"
           stroke="currentColor"
           strokeLinecap="round"
           strokeLinejoin="round"
           strokeWidth="2"
-          className="w-5 h-5 mx-auto cursor-pointer"
+          className="w-5 h-5 mx-auto cursor-pointer mt-2"
           viewBox="0 0 24 24"
         >
           <rect width="20" height="20" x="2" y="2" rx="5" ry="5"></rect>
